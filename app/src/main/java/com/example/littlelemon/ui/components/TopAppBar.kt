@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.IconButton
+import androidx.compose.material.DrawerState
+import androidx.compose.material.DrawerValue
 import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,7 +20,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun TopAppBar(scaffoldState: ScaffoldState? = null, scope: CoroutineScope? = null) {
+fun TopAppBar(scaffoldState: ScaffoldState? = null, scope: CoroutineScope? = null, drawerContent: @Composable () -> Unit) {
     Row(horizontalArrangement = Arrangement.SpaceBetween,
     modifier = Modifier.fillMaxWidth(),
     verticalAlignment = Alignment.CenterVertically) {
@@ -52,3 +54,8 @@ fun TopAppBar(scaffoldState: ScaffoldState? = null, scope: CoroutineScope? = nul
 fun TopAppBarPreview() {
     TopAppBar()
 }
+
+
+
+
+
