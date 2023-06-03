@@ -99,8 +99,4 @@ fun Counter() {
     }
 }
 
-/*@Preview(showBackground = true)
-@Composable
-fun DishDetailsPreview() {
-    DishDetails(id = 1)
-}*/
+
