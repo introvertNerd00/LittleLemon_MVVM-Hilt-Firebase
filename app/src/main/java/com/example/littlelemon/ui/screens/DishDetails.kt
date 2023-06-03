@@ -26,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.example.littlelemon.DrawerContent
 import com.example.littlelemon.R
 import com.example.littlelemon.TopAppBar
 import com.example.littlelemon.ui.viewmodel.DishViewModel
@@ -38,7 +39,7 @@ fun DishDetails(id: Int, viewModel: DishViewModel) {
         mutableStateOf(true)
     }
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        TopAppBar()
+        TopAppBar(drawerContent = { DrawerContent() },)
         Box{
             Image(
                 painter = rememberAsyncImagePainter(dish.imageUrl, onLoading = {isLoading = true}, onSuccess = {isLoading = false} ),
